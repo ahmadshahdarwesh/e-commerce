@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import data from "./data";
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetschData = async () => {
+      const result = await axios.get("/api/products");
+      setProducts(result.data);
+    };
+    fetschData();
+  }, []);
   return (
     <div>
       <header>
