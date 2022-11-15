@@ -5,7 +5,7 @@ const data = {
       id: "123",
       category: "Bracelets",
       image: "/images/p1.png",
-      price: 10,
+      price: "$10",
       stock: 100,
       brand: "MAF",
       rating: 4.5,
