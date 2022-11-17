@@ -34,7 +34,9 @@ function HomeScreen() {
       } catch (error) {
         dispatch({ type: "Fetch_Fail", payload: error.message });
       }
-      //setProducts(result.data);
+      // setProducts(result.data);
+      // const response = await axios.get("/api/products");
+      // console.log(response);
     };
     fetschData();
   }, []);
@@ -47,7 +49,9 @@ function HomeScreen() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          products.map((product) => <Product product={product}></Product>)
+          products.map((product, key) => (
+            <Product key={key} product={product}></Product>
+          ))
         )}
       </div>
     </div>

@@ -15,7 +15,6 @@ function Rating(props) {
           }
         />
       </span>
-
       <span>
         <i
           className={
@@ -71,6 +70,7 @@ function Rating(props) {
           }
         />
       </span>
+      <span> {numReviews} reviews</span>
     </div>
   );
 }
