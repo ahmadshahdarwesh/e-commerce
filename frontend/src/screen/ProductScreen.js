@@ -33,7 +33,7 @@ function ProductScreen() {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: "Fetch_Success", payload: result.data });
       } catch (error) {
-        dispatch({ type: "Fetch_Fail", payload: getError(err) });
+        dispatch({ type: "Fetch_Fail", payload: getError(error) });
       }
       //setProducts(result.data);
     };
