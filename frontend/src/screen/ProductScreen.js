@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import { getError } from "../utils";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -30,16 +33,16 @@ function ProductScreen() {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: "Fetch_Success", payload: result.data });
       } catch (error) {
-        dispatch({ type: "Fetch_Fail", payload: error.message });
+        dispatch({ type: "Fetch_Fail", payload: getError(err) });
       }
       //setProducts(result.data);
     };
     fetschData();
   }, [slug]);
   return loading ? (
-    <div>Loading.....</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>{product.name}</div>
   );
