@@ -27,6 +27,7 @@ const data = {
 
     {
       name: "Bracelets one",
+
       category: "Bracelets",
       image: "/images/p2.png",
       price: 10,
