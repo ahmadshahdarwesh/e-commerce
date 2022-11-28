@@ -1,9 +1,8 @@
 const data = {
   products: [
     {
-      _id: '1',
-      name: "Bracelets one",
-      id: "123",
+      name: "agate",
+      slug: "Tiger eye",
       category: "Bracelets",
       image: "/images/p1.png",
       price: 10,
@@ -15,8 +14,8 @@ const data = {
     },
 
     {
-      _id: '2',
-      name: "Bracelets one",
+      name: "Tiger eye",
+      slug: "Jade",
       category: "Bracelets",
       image: "/images/p1.png",
       price: 10,
@@ -28,8 +27,8 @@ const data = {
     },
 
     {
-      _id: '3',
       name: "Bracelets one",
+      slug: "Jasper",
       category: "Bracelets",
       image: "/images/p2.png",
       price: 10,
@@ -41,8 +40,8 @@ const data = {
     },
 
     {
-      _id: '4',
       name: "Bracelets one",
+      slug: "Lava",
       category: "Bracelets",
       image: "/images/p3.png",
       price: 10,

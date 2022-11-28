@@ -15,15 +15,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="d-flex flex-column site-container">
         <header>
           <Link to="/">MAF</Link>
-          <Nav className="me-auto">
+          <Nav className="me-auto" bg="dark" variant="dark">
                 <Link to="/cart" className="nav-link">
                   Cart
                   {cart.cartItems.length > 0 && (
                     <Badge pill bg="danger">
-                      {cart.cartItems.length}
+                      {/* {cart.cartItems.length} */}
                       {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </Badge>
                   )}

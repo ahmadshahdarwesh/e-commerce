@@ -1,4 +1,6 @@
 import React from "react";
+// import FortAwesomeIcon from "@fort-awesome/react-fontawesome";
+// import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 function Rating(props) {
   const { rating, numReviews } = props;
@@ -70,6 +72,8 @@ function Rating(props) {
           }
         />
       </span>
+      {/* <span>{rating >= 1 ? <AiOutlineStar /> : <AiFillStar />}</span> */}
+
       <span> {numReviews} reviews</span>
     </div>
   );
