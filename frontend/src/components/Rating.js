@@ -1,33 +1,14 @@
 import React from "react";
-
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 function Rating(props) {
   const { rating, numReviews } = props;
   return (
     <div className="rating">
-      <span>
-        <i
-          className={
-            rating >= 1
-              ? "fas fa-star"
-              : rating >= 0.5
-              ? "fas fa-star-half-alt"
-              : "far fa-star"
-          }
-        />
-      </span>
-      <span>
-        <i
-          className={
-            rating >= 1
-              ? "fas fa-star"
-              : rating >= 0.5
-              ? "fas fa-star-half-alt"
-              : "far fa-star"
-          }
-        />
-      </span>
-      <span>
-        <i
+      <span>{rating >= 1 ? <AiOutlineStar /> : <AiFillStar />}</span>
+      {/* <span>
+        <
+        
           className={
             rating >= 2
               ? "fas fa-star"
@@ -69,7 +50,7 @@ function Rating(props) {
               : "far fa-star"
           }
         />
-      </span>
+      </span> */}
       <span> {numReviews} reviews</span>
     </div>
   );

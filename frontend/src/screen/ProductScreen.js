@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
+import Rating from "../components/Rating";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -41,7 +42,22 @@ function ProductScreen() {
   ) : error ? (
     <div>{error}</div>
   ) : (
-    <div>{product.name}</div>
+    <div>
+      <h1>{product.name}</h1>
+      <img className="pro-image" src={product.image} alt={product.name} />
+      <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
+      <p>{product.price}</p>
+      Description:
+      <p>{product.description}</p>
+      <p>Status:</p>
+      <p>
+        {product.stock > 0 ? (
+          ((<span>In stock</span>), (<button>Add to cart</button>))
+        ) : (
+          <button>unavailable</button>
+        )}
+      </p>
+    </div>
   );
 }
 export default ProductScreen;

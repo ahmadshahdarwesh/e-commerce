@@ -36,3 +36,12 @@ main {
 .product-info {
   padding: 1rem;
 }
+.fa-star {
+  color: orange;
+  font-size: 20px;
+}
+
+.pro-image {
+  width: 100%;
+  max-width: 400px;
+}
